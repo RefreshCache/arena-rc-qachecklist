@@ -6,6 +6,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arena.Custom.RefreshCache.QAChecklist", "Arena.Custom.RefreshCache.QAChecklist\Arena.Custom.RefreshCache.QAChecklist.csproj", "{AF83014E-824E-4E11-83DD-FFE4EC5730E4}"
 EndProject
 Global
+	GlobalSection(RocketSvnScc) = preSolution
+		Svn-Managed = True
+		Manager = Rocket SVN - Subversion Support for Visual Studio
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
