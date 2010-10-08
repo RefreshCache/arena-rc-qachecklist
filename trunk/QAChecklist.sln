@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arena.Custom.RefreshCache.QAChecklist.Tests", "Arena.Custom.RefreshCache.QAChecklist.Tests\Arena.Custom.RefreshCache.QAChecklist.Tests.csproj", "{37C7567F-0574-4CA1-9DF4-A1BA2660F1D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arena.Custom.RefreshCache.QAChecklist", "Arena.Custom.RefreshCache.QAChecklist\Arena.Custom.RefreshCache.QAChecklist.csproj", "{AF83014E-824E-4E11-83DD-FFE4EC5730E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37C7567F-0574-4CA1-9DF4-A1BA2660F1D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37C7567F-0574-4CA1-9DF4-A1BA2660F1D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37C7567F-0574-4CA1-9DF4-A1BA2660F1D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37C7567F-0574-4CA1-9DF4-A1BA2660F1D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF83014E-824E-4E11-83DD-FFE4EC5730E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF83014E-824E-4E11-83DD-FFE4EC5730E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF83014E-824E-4E11-83DD-FFE4EC5730E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF83014E-824E-4E11-83DD-FFE4EC5730E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
