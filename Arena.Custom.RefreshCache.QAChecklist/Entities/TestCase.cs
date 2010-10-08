@@ -12,10 +12,7 @@
 **********************************************************************/
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Data.Linq;
 using System.Data.Linq.Mapping;
-using System.Text;
 using Arena.Custom.Cccev.FrameworkUtils.Entity;
 
 namespace Arena.Custom.RefreshCache.QAChecklist.Entities
@@ -25,7 +22,7 @@ namespace Arena.Custom.RefreshCache.QAChecklist.Entities
 	{
 		#region Properties/Columns
 
-		private readonly List<string> errors = new List<string>();
+	    private List<string> errors;
 
 		[Column(Name = "testcase_id", IsPrimaryKey = true, IsDbGenerated = true)]
 		public int TestCaseID { get; set; }
@@ -51,6 +48,17 @@ namespace Arena.Custom.RefreshCache.QAChecklist.Entities
 		[Column(Name = "date_modified")]
 		public override DateTime DateModified { get; set; }
 
-		#endregion
+	    public override bool IsValid
+	    {
+	        get { throw new NotImplementedException(); }
+	    }
+
+        private bool Validate()
+        {
+            errors = new List<string>();
+            return false;
+        }
+
+	    #endregion
 	}
 }
