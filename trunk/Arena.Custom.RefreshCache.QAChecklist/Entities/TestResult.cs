@@ -16,19 +16,19 @@ namespace Arena.Custom.RefreshCache.QAChecklist.Entities
 
         #region Public Properties...
 
-        [Column(Name = "testresult_id", IsPrimaryKey = true, IsDbGenerated = true, AutoSync = AutoSync.OnInsert)]
+        [Column(Name = "test_result_id", IsPrimaryKey = true, IsDbGenerated = true, AutoSync = AutoSync.OnInsert)]
         public int TestResultId { get; set; }
 
         [Column(Name = "releaseversion_id", CanBeNull = false)]
         public int ReleaseVersionId { get; set; }
 
-        [Column(Name = "testcase_id", CanBeNull = false)]
+        [Column(Name = "test_case_id", CanBeNull = false)]
         public int TestCaseId { get; set; }
 
         [Column(Name = "church_id", CanBeNull = false)]
         public int ChurchId { get; set; }
 
-        [Column(Name = "status", CanBeNull = true)]
+        [Column(Name = "result_status", CanBeNull = true)]
         public string Status { get; set; }
 
         [Column(Name = "notes")]
