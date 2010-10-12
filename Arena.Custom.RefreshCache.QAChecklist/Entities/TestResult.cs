@@ -60,6 +60,7 @@ namespace Arena.Custom.RefreshCache.QAChecklist.Entities
             set { this._testCase.Entity = value; }
         }
 
+
         //[System.Data.Linq.Mapping.Association(Storage = "_church", ThisKey = "ChurchId")]
         //public Church Church
         //{
@@ -67,12 +68,19 @@ namespace Arena.Custom.RefreshCache.QAChecklist.Entities
         //    set { this._church.Entity = value; }
         //}
 
+
         //[System.Data.Linq.Mapping.Association(Storage = "_releaseVersion", ThisKey = "ReleaseVersionId")]
         //public ReleaseVersion ReleaseVersion
         //{
         //    get { return this._releaseVersion.Entity; }
         //    set { this._releaseVersion.Entity = value; }
         //}
+
+
+        public override bool IsValid
+        {
+            get { throw new NotImplementedException(); }
+        }
 
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
