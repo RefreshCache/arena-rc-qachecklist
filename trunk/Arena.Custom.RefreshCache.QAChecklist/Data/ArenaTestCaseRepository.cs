@@ -47,7 +47,12 @@ namespace Arena.Custom.RefreshCache.QAChecklist.Data
 			return db.GetTable<TestCase>().SingleOrDefault(b => b.TestCaseID == id);
 		}
 
-		public void Delete(TestCase testCase)
+	    public void Add(TestCase testCase)
+	    {
+	        db.GetTable<TestCase>().InsertOnSubmit(testCase);
+	    }
+
+	    public void Delete(TestCase testCase)
 		{
 			db.GetTable<TestCase>().DeleteOnSubmit( testCase );
 		}
