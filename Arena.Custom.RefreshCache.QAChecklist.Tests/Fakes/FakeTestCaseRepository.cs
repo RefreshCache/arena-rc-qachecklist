@@ -23,6 +23,8 @@ namespace Arena.Custom.RefreshCache.QAChecklist.Tests
 
         public FakeTestCaseRepository()
         {
+            testCases = new List<TestCase>();
+
             for (int i = 0; i < 10; i++)
             {
                 testCases.Add(new TestCase
