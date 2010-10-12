@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Data.Linq.Mapping;
 using System.ComponentModel.DataAnnotations;
 using Arena.Custom.Cccev.FrameworkUtils.Entity;
 using System.Data.Linq;
+using System.Data.Linq.Mapping;
+using System.Linq;
+using System.Text;
 
 namespace Arena.Custom.RefreshCache.QAChecklist.Entities
 {
