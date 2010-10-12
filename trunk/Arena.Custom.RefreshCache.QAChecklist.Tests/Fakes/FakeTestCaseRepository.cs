@@ -56,6 +56,11 @@ namespace Arena.Custom.RefreshCache.QAChecklist.Tests
 	    {
 	    }
 
+        public void Add(TestCase testCase)
+        {
+            testCases.Add(testCase);
+        }
+
 	    public void Delete(TestCase testCase)
 	    {
 	        if (testCases.Any(tc => tc.TestCaseID == testCase.TestCaseID))
@@ -68,5 +73,8 @@ namespace Arena.Custom.RefreshCache.QAChecklist.Tests
 	    {
 	        return testCases.Any(tc => tc.TestCaseID == id);
 	    }
-	}
+
+
+        
+    }
 }
