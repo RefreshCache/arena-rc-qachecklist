@@ -4,16 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Data.Linq.Mapping;
 using System.ComponentModel.DataAnnotations;
+using Arena.Custom.Cccev.FrameworkUtils.Entity;
+using System.Data.Linq;
 
 namespace Arena.Custom.RefreshCache.QAChecklist.Entities
 {
     [Table(Name = "cust_refreshcache_qachk_testresult")]
-    public class TestResult : IValidatableObject
+    public class TestResult : CentralObjectBase, IValidatableObject
     {
-        private List<string> errors;
+        private EntityRef<TestCase> _testCase;
 
+        #region Public Properties...
 
-        [Column(Name = "testresult_id", IsPrimaryKey = true, IsDbGenerated = true)]
+        [Column(Name = "testresult_id", IsPrimaryKey = true, IsDbGenerated = true, AutoSync = AutoSync.OnInsert)]
         public int TestResultId { get; set; }
 
         [Column(Name = "releaseversion_id", CanBeNull = false)]
@@ -30,6 +33,26 @@ namespace Arena.Custom.RefreshCache.QAChecklist.Entities
 
         [Column(Name = "notes")]
         public string Notes { get; set; }
+
+		[Column(Name = "created_by")]
+		public override string CreatedBy { get; set; }
+
+		[Column(Name = "date_created")]
+		public override DateTime DateCreated { get; set; }
+
+		[Column(Name = "modified_by")]
+		public override string ModifiedBy { get; set; }
+
+		[Column(Name = "date_modified")]
+		public override DateTime DateModified { get; set; }
+
+        #endregion
+
+        [System.Data.Linq.Mapping.Association(Storage="_testCase", ThisKey="TestCaseId")]
+        public TestCase TestCase {
+            get {  return this._testCase.Entity; }
+            set { this._testCase.Entity = value; }
+        }
 
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
