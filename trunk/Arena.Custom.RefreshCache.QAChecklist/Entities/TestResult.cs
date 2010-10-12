@@ -12,8 +12,14 @@ namespace Arena.Custom.RefreshCache.QAChecklist.Entities
     [Table(Name = "cust_refreshcache_qachk_testresult")]
     public class TestResult : CentralObjectBase, IValidatableObject
     {
-        private EntityRef<TestCase> _testCase;
+        /// <summary>
+        /// TODO: Uncomment the EntityRef's and association properties
+        /// once the other entities have been created
+        /// </summary>
 
+        private EntityRef<TestCase> _testCase;
+        //private EntityRef<Church> _church;
+        //private EntityRef<ReleaseVersion> _releaseVersion;
         #region Public Properties...
 
         [Column(Name = "test_result_id", IsPrimaryKey = true, IsDbGenerated = true, AutoSync = AutoSync.OnInsert)]
@@ -53,6 +59,20 @@ namespace Arena.Custom.RefreshCache.QAChecklist.Entities
             get {  return this._testCase.Entity; }
             set { this._testCase.Entity = value; }
         }
+
+        //[System.Data.Linq.Mapping.Association(Storage = "_church", ThisKey = "ChurchId")]
+        //public Church Church
+        //{
+        //    get { return this._church.Entity; }
+        //    set { this._church.Entity = value; }
+        //}
+
+        //[System.Data.Linq.Mapping.Association(Storage = "_releaseVersion", ThisKey = "ReleaseVersionId")]
+        //public ReleaseVersion ReleaseVersion
+        //{
+        //    get { return this._releaseVersion.Entity; }
+        //    set { this._releaseVersion.Entity = value; }
+        //}
 
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
