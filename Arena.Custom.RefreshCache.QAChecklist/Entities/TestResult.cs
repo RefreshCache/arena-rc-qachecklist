@@ -19,7 +19,7 @@ namespace Arena.Custom.RefreshCache.QAChecklist.Entities
         [Column(Name = "test_result_id", IsPrimaryKey = true, IsDbGenerated = true, AutoSync = AutoSync.OnInsert)]
         public int TestResultId { get; set; }
 
-        [Column(Name = "releaseversion_id", CanBeNull = false)]
+        [Column(Name = "release_version_id", CanBeNull = false)]
         public int ReleaseVersionId { get; set; }
 
         [Column(Name = "test_case_id", CanBeNull = false)]
