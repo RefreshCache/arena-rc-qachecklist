@@ -21,6 +21,7 @@ namespace Arena.Custom.RefreshCache.QAChecklist.Data
 		IEnumerable<TestCase> GetTestCasesByCategory( int categoryID );
 		TestCase GetTestCase( int id );
 		void Save();
+        void Add(TestCase testCase)
 		void Delete( TestCase testCase );
 		bool Exists( int id );
 	}
