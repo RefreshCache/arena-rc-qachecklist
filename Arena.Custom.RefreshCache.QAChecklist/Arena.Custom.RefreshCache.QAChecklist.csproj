@@ -48,7 +48,6 @@
   <ItemGroup>
     <Compile Include="Data\ITestCaseRepository.cs" />
     <Compile Include="Data\ArenaTestCaseRepository.cs" />
-    <Compile Include="Entities\Checklist.cs" />
     <Compile Include="Entities\TestCase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
