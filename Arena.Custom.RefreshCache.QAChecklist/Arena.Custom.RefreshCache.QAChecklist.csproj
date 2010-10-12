@@ -48,8 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\ArenaFavoriteRepository.cs" />
+    <Compile Include="Data\IFavoriteCaseRepository.cs" />
     <Compile Include="Data\ITestCaseRepository.cs" />
     <Compile Include="Data\ArenaTestCaseRepository.cs" />
+    <Compile Include="Entities\Favorite.cs" />
     <Compile Include="Entities\Church.cs" />
     <Compile Include="Entities\TestCase.cs" />
     <Compile Include="Entities\TestResult.cs" />
